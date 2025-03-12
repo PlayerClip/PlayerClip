@@ -6,9 +6,12 @@ function App() {
     <>
     <h1> Welcome to Player Clip!</h1>
     <div className='mainComponent'>
+
       <div className= 'constantView'>
       </div>
+
       <div className= 'tabs'>
+        
       </div>
     </div>
     </>
