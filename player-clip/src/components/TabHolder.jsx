@@ -1,4 +1,4 @@
-import './TabHolder.css'
+import './css/TabHolder.css'
 import Tab from './Tab.jsx'
 
 function TabHolder() {
