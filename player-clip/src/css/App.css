@@ -5,17 +5,22 @@
   text-align: center;
 }
 
-.mainComponent {
-  width: 1000px;
-  height: 200px;
-  background-color: #d7d7d7;
-  cursor: pointer;
-  position: fixed;
-  place-items: center;
-  display: flex;
+.project_name{
+  color: white
 }
 
-.constantView {
+.mainComponent {
+  width: 90%;
+  height: 100%;
+  background-color: #d7d7d7;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+}
+
+/* .constantView {
   margin: 5px;
   width: 20%;
   height: 95%;
@@ -27,4 +32,4 @@
   width: 80%;
   height: 95%;
   background-color: #f8f8f8;
-}
+} */

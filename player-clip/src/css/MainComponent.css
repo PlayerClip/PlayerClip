@@ -1,0 +1,29 @@
+.main-component {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #d7d7d7;
+  padding: 10px;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+   
+}
+
+.constantView {
+  margin: 5px;
+  width: 25%;
+  height: 100%;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+.tabs {
+  margin: 5px;
+  width: 75%;
+  height: 100%;
+  background-color: #444444;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
