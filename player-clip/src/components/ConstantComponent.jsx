@@ -1,6 +1,6 @@
-import React from 'react'
 import '../css/ConstantComponent.css'
-import CardComponent from './CardComponent.jsx'
+import CardComponent from './CardComponent'
+import React from 'react'
 
 function ConstantComponent() {
     return (
