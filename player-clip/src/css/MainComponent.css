@@ -16,6 +16,7 @@
   height: 90%;
   background-color: #f8f8f800;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .tabs {
@@ -26,4 +27,5 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }

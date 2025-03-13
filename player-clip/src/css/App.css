@@ -10,6 +10,7 @@
 }
 
 .mainComponent {
+  margin: 5px;
   width: 1000px;
   height: 200px;
 
@@ -19,9 +20,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  /* margin: 1em; */
-  /* margin-left: 5%; */
-
+  border-radius: 10px;
 }
 
 /* .constantView {
