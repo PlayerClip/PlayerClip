@@ -23,6 +23,10 @@ function TabHolder() {
 
     const renderContent = () => {
         switch (activeTab) {
+            case 'core-stats':
+                return (<CardComponent title="Core Stats" content="Core stats details here" />)
+            case 'spells':
+                return <CardComponent title="Spells" content="List of spells here" />
             case 'items':
                 return (
                     <div className="items-container">
@@ -37,10 +41,6 @@ function TabHolder() {
                         </div>
                     </div>
                 )
-            case 'spells':
-                return <CardComponent title="Spells" content="List of spells here" />
-            case 'core-stats':
-                return <CardComponent title="Core Stats" content="Core stats details here" />
             default:
                 return null
         }
@@ -49,6 +49,12 @@ function TabHolder() {
     return (
         <div className="tabs">
             <div className="navbar">
+                <button
+                    className={activeTab === 'core-stats' ? 'active' : ''}
+                    onClick={() => setActiveTab('core-stats')}
+                >
+                    Core Stats
+                </button>
                 <button
                     className={activeTab === 'items' ? 'active' : ''}
                     onClick={() => setActiveTab('items')}
@@ -60,12 +66,6 @@ function TabHolder() {
                     onClick={() => setActiveTab('spells')}
                 >
                     Spells
-                </button>
-                <button
-                    className={activeTab === 'core-stats' ? 'active' : ''}
-                    onClick={() => setActiveTab('core-stats')}
-                >
-                    Core Stats
                 </button>
             </div>
             <div className="tab-content">

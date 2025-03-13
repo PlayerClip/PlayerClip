@@ -13,17 +13,17 @@
 .constantView {
   margin: 1%;
   width: 20%;
-  height: 90%;
+  height: 96%;
   background-color: #f8f8f800;
   box-sizing: border-box;
   border-radius: 10px;
 }
 
 .tabs {
-  margin: 1%;
-  width: 75%;
-  height: 90%;
-  background-color: #444444;
+  margin: 1%  ;
+  width: 98%;
+  height: 92%;
+  background-color: #acacac;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
