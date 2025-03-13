@@ -5,11 +5,11 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .navbar {
     display: flex;
-    /* justify-content: space-around; */
     background-color: #66666600; 
     opacity: 100%;
     /* flex-shrink: 0; */
@@ -21,8 +21,8 @@
 .navbar button {
     background-color: #e0e0e0;
     /* border: 1px solid #71717100; */
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 10px;
     cursor: pointer;
     color: black

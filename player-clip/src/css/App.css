@@ -10,7 +10,8 @@
 }
 
 .mainComponent {
-  margin: 5px;
+  /* align-self:baseline; */
+  margin: 10px;
   width: 1000px;
   height: 200px;
   min-width: 400px;
