@@ -9,12 +9,8 @@ function MainComponent(){
 
     return (
             <div className='mainComponent'>
-                <div className= 'constantView'>
-                    <ConstantComponent/>
-                </div>
-                <div className= 'tabs'>                         
-                    <TabHolder />
-                </div>
+                <div className= 'constantView'><ConstantComponent/></div>
+                <div className= 'tabs'><TabHolder /></div>
             </div>
     )
 }
