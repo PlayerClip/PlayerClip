@@ -10,19 +10,20 @@
   /* margin-left: 20px ; */
 }
 
-.constantView {
+/*We had too many divs and components inside divs so i had to remove some to avoid confusion*/
+/* .constantView {
   margin: 1%;
   width: 20%;
   height: 96%;
   background-color: #f8f8f800;
   box-sizing: border-box;
   border-radius: 10px;
-}
+} */
 
 .tabs {
   margin: 1%;
   width: 98%;
-  height: 92%;
+  height: 94%;
   background-color: #acacac;
   box-sizing: border-box;
   display: flex;

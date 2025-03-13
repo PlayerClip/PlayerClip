@@ -1,13 +1,12 @@
 .fixed-card {
     position: relative;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 1px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 100%;
-    width: 500%;
-    max-width: 600%;
+    width: 100%;
     box-sizing: border-box;
     overflow: auto; 
     font-size: 0.65rem; 
