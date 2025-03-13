@@ -53,6 +53,9 @@
 }
 
 .plus-tile {
+    margin: 5px;
+    height: 150px;
+    min-width: 150px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,5 +63,5 @@
     border: 1px  #717171;
     cursor: pointer;
     font-size: 2rem;
-    color: #00fffb;
+    color: #000000;
 }
