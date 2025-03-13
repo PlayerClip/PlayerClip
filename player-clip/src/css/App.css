@@ -10,17 +10,17 @@
 }
 
 .mainComponent {
-  width: 90%;
-  height: 100%;
+  width: 1000px;
+  height: 200px;
 
   min-width: 400px;
   min-height: 200px;
   background-color: #d7d7d7;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-left: 5%;
+  /* margin: 1em; */
+  /* margin-left: 5%; */
 
 }
 
