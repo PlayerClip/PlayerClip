@@ -10,6 +10,7 @@ function MainComponent(){
     return (
             <div className='mainComponent'>
                 {/* removed this div specifivally because it got confusing to navigtate and style*/}
+                
                 <ConstantComponent/>
                 <div className= 'tabs'>
                     <TabHolder />
