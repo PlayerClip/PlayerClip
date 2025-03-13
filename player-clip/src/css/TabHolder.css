@@ -44,6 +44,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: auto;
     width: auto;
+    height: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-bottom-left-radius: 10px;
@@ -53,11 +54,15 @@
 
 .items-container {
     display: flex;
+    height: 98%;
     gap: 10px;
 }
 
 .plus-tile {
-    margin: 5px;
+    margin: 1%;
+    /* height: 100%; */
+    width: 20%;
+    height: 94%;
     min-height: 100px;
     min-width: 150px; 
     display: flex;
