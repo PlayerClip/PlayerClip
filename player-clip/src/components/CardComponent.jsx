@@ -4,7 +4,7 @@ import '../css/CardComponent.css'
 function CardComponent({ title, content, onDelete }) {
     return (
         <div className="card">
-            <button className="delete-button" onClick={onDelete}>X</button>
+            <button className="delete-button" onClick={onDelete}>x</button>
             <h2>{title}</h2>
             <p>{content}</p>
         </div>
