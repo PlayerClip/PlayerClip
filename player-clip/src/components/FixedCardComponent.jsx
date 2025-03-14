@@ -5,8 +5,14 @@ function FixedCardComponent({ name, level, hitpoints, actionClass, initiative, i
     return (
         <div className="fixed-card">
             <div className="header">
-                <h2>{name}</h2>
-                <p>Level: {level}</p>
+                <div className="field_h">
+                    <label>Name:</label>
+                    <input type="text" value={name} placeholder="Type name" onChange={(e) => onChange('name', e.target.value)} />
+                </div>
+                <div className="field_h">
+                    <label>Level:</label>
+                    <input type="number" value={level} placeholder="0" onChange={(e) => onChange('level', e.target.value)} />
+                </div>
             </div>
             <div className="fields-container">
                 <div className="field">
@@ -14,7 +20,7 @@ function FixedCardComponent({ name, level, hitpoints, actionClass, initiative, i
                     <input type="number" value={hitpoints} onChange={(e) => onChange('hitpoints', e.target.value)} />
                 </div>
                 <div className="field">
-                    <label>Action Class:</label>
+                    <label>AC:</label>
                     <input type="text" value={actionClass} onChange={(e) => onChange('actionClass', e.target.value)} />
                 </div>
                 <div className="field">

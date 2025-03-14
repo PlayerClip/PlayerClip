@@ -14,10 +14,12 @@
 }
 
 .header {
+    padding: 2px;
+    margin-right: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 1%;
+    gap: 100px;
 }
 
 .fields-container {
@@ -31,6 +33,22 @@
     align-items: center;
     margin-bottom: 4px;
     width: 50%; 
+}
+
+.field_h{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    width: 10%; 
+ 
+}
+
+.field_h input{
+    flex: 1;
+    padding: 5px;
+    box-sizing: border-box;
+    max-width: 80px;
+    color: white ;
 }
 
 .field label {
