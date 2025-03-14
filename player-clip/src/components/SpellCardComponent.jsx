@@ -1,14 +1,15 @@
 import React from 'react'
 import '../css/CardComponent.css'
 
-function CardComponent({ title, content, onDelete }) {
+function SpellCardComponent({ name, level, effect, onDelete }) {
     return (
         <div className="card">
             <button className="delete-button" onClick={onDelete}>x</button>
-            <h3>{title}</h3>
-            <p>{content}</p>
+            <h3>{name}</h3>
+            <p>Level: {level}</p>
+            <p>Effect: {effect}</p>
         </div>
     )
 }
 
-export default CardComponent
+export default SpellCardComponent

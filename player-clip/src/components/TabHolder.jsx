@@ -1,18 +1,27 @@
 import CardComponent from './CardComponent.jsx'
+import ItemCardComponent from './ItemCardComponent.jsx'
+import SpellCardComponent from './SpellCardComponent.jsx'
+import CoreStatCardComponent from './CoreStatCardComponent.jsx'
 import React, { useState } from 'react'
 import '../css/TabHolder.css'
 
 function TabHolder() {
     const [activeTab, setActiveTab] = useState('items')
 
-    const [items, setItems] = useState([
-        { title: 'item 1', content: 'info on item 1' },
-        { title: 'Item 2', content: 'info on item 2' },
-        { title: 'Item 3', content: 'info on item 3' }
+    const [items, setItems] = useState([https://react-bootstrap.netlify.app/docs/components/modal/#focus-on-specific-element
+        { title: 'item 1', level: 'Level 1' },
+    ])
+
+    const [spells, setSpells] = useState([
+        { name: 'spell 1', level: 1, effect: 'effect of spell 1' },
+    ])
+
+    const [coreStats, setCoreStats] = useState([
+        { stat: 'core 1', value: 10, description: 'description' },
     ])
 
     const addItem = () => {
-        const newItem = { title: `Item ${items.length + 1}`, content: `info item ${items.length + 1}` }
+        const newItem = { title: `Item ${items.length + 1}`, level: `Level  ${items.length + 1}` }
         setItems([...items, newItem])
     }
 
@@ -21,18 +30,62 @@ function TabHolder() {
         setItems(newItems)
     }
 
+    const addSpell = () => {
+        const newSpell = { name: `Spell ${spells.length + 1}`, level: spells.length + 1, effect: `effect ${spells.length + 1}` }
+        setSpells([...spells, newSpell])
+    }
+
+    const deleteSpell = (index) => {
+        const newSpells = spells.filter((_, i) => i !== index)
+        setSpells(newSpells)
+    }
+
+    const addCoreStat = () => {
+        const newCoreStat = { stat: `Core Stat ${coreStats.length + 1}`, value: coreStats.length + 1, description: `description ${coreStats.length + 1}` }
+        setCoreStats([...coreStats, newCoreStat])
+    }
+
+    const deleteCoreStat = (index) => {
+        const newCoreStats = coreStats.filter((_, i) => i !== index)
+        setCoreStats(newCoreStats)
+    }
+
     const renderContent = () => {
         switch (activeTab) {
             case 'core-stats':
-                return (<CardComponent title="Core Stats" content="Core stats details here" />)
+                return (
+                    <div className="items-container">
+                        {coreStats.map((coreStat, index) => (
+                            <CoreStatCardComponent key={index} 
+                            stat={coreStat.stat} value={coreStat.value} description={coreStat.description} 
+                            onDelete={() => deleteCoreStat(index)}                           
+                            />
+                        ))}
+                        <div className="plus-tile" onClick={addCoreStat}>
+                            +
+                        </div>
+                    </div>
+                )
             case 'spells':
-                return <CardComponent title="Spells" content="List of spells here" />
+                return (
+                    <div className="items-container">
+                        {spells.map((spell, index) => (
+                            <SpellCardComponent key={index} 
+                            name={spell.name} level={spell.level} effect={spell.effect} 
+                            onDelete={() => deleteSpell(index)}                           
+                            />
+                        ))}
+                        <div className="plus-tile" onClick={addSpell}>
+                            +
+                        </div>
+                    </div>
+                )
             case 'items':
                 return (
                     <div className="items-container">
                         {items.map((item, index) => (
-                            <CardComponent key={index} 
-                            title={item.title} content={item.content} 
+                            <ItemCardComponent key={index} 
+                            title={item.title} content={item.level} 
                             onDelete={() => deleteItem(index)}                           
                             />
                         ))}

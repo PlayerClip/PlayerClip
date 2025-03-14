@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/CardComponent.css'
 
-function CardComponent({ title, content, onDelete }) {
+function ItemCardComponent({ title, content, onDelete }) {
     return (
         <div className="card">
             <button className="delete-button" onClick={onDelete}>x</button>
@@ -11,4 +11,4 @@ function CardComponent({ title, content, onDelete }) {
     )
 }
 
-export default CardComponent
+export default ItemCardComponent
