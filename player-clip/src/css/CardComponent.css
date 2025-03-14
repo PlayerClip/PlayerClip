@@ -1,0 +1,28 @@
+.card {
+    margin: 0.5%;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
+    width: 18%;
+    height: 96%;
+    min-height: 100px;
+    box-sizing: border-box;
+    min-width: 150px;
+
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
