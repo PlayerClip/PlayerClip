@@ -8,8 +8,8 @@ import '../css/TabHolder.css'
 function TabHolder() {
     const [activeTab, setActiveTab] = useState('items')
 
-    const [items, setItems] = useState([https://react-bootstrap.netlify.app/docs/components/modal/#focus-on-specific-element
-        { title: 'item 1', level: 'Level 1' },
+    const [items, setItems] = useState([
+        { title: 'item 1', level: '1' },
     ])
 
     const [spells, setSpells] = useState([
