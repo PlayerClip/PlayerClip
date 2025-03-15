@@ -7,7 +7,7 @@ function CoreStatCardComponent({ stat, value, description, onDelete }) {
             <button className="delete-button" onClick={onDelete}>x</button>
             <h3>{stat}</h3>
             <p>Value: {value}</p>
-            <p>{description}</p>
+            {/* <p>{description}</p> */}
         </div>
     )
 }
