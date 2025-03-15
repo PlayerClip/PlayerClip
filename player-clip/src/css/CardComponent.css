@@ -3,26 +3,41 @@
     position: relative;
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 5%;
+    padding: 2%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
-    width: 18%;
+    width: 14%;
+    min-width: 14%;
     height: 96%;
-    min-height: 100px;
     box-sizing: border-box;
-    min-width: 150px;
+    font-size: 1em;
+}
 
+.card:hover {
+    transform: scale(1.02);
+}
+.hover-content {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 98%;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1%;
+    /* margin-left: 5%; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .delete-button {
+    margin: 1%;
     position: absolute;
-    top: 5px;
-    right: 5px;
-    background: red;
+    top: 1%;
+    right: 1%;
+    /* background: black; */
     color: white;
     border: none;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
     cursor: pointer;
 }
