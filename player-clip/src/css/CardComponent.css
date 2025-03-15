@@ -14,6 +14,23 @@
 
 }
 
+.card:hover {
+    transform: scale(1.01);
+}
+.hover-content {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 75%;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
 .delete-button {
     position: absolute;
     top: 5px;

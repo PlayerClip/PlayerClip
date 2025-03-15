@@ -1,0 +1,38 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.field label {
+    margin-bottom: 5px;
+}
+
+.field input {
+    padding: 5px;
+    box-sizing: border-box;
+}
+

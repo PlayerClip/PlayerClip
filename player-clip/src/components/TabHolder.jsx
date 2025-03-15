@@ -1,4 +1,3 @@
-import CardComponent from './CardComponent.jsx'
 import ItemCardComponent from './ItemCardComponent.jsx'
 import SpellCardComponent from './SpellCardComponent.jsx'
 import CoreStatCardComponent from './CoreStatCardComponent.jsx'
@@ -9,7 +8,7 @@ function TabHolder() {
     const [activeTab, setActiveTab] = useState('items')
 
     const [items, setItems] = useState([
-        { title: 'item 1', level: '1' },
+        { title: 'item 1', level: 'Level 1', description: 'description of item 1', damage: '10' },
     ])
 
     const [spells, setSpells] = useState([
@@ -21,12 +20,18 @@ function TabHolder() {
     ])
 
     const addItem = () => {
-        const newItem = { title: `Item ${items.length + 1}`, level: `Level  ${items.length + 1}` }
+        const newItem = { title: `Item ${items.length + 1}`, level: `Level  ${items.length + 1}`, description: '', damage: '' }
         setItems([...items, newItem])
     }
 
     const deleteItem = (index) => {
         const newItems = items.filter((_, i) => i !== index)
+        setItems(newItems)
+    }
+
+    const saveItem = (updatedItem, index) => {
+        const newItems = [...items]
+        newItems[index] = updatedItem
         setItems(newItems)
     }
 
@@ -40,6 +45,12 @@ function TabHolder() {
         setSpells(newSpells)
     }
 
+    const saveSpell = (updatedSpell, index) => {
+        const newSpells = [...spells]
+        newSpells[index] = updatedSpell
+        setSpells(newSpells)
+    }
+
     const addCoreStat = () => {
         const newCoreStat = { stat: `Core Stat ${coreStats.length + 1}`, value: coreStats.length + 1, description: `description ${coreStats.length + 1}` }
         setCoreStats([...coreStats, newCoreStat])
@@ -47,6 +58,12 @@ function TabHolder() {
 
     const deleteCoreStat = (index) => {
         const newCoreStats = coreStats.filter((_, i) => i !== index)
+        setCoreStats(newCoreStats)
+    }
+
+    const saveCoreStat = (updatedCoreStat, index) => {
+        const newCoreStats = [...coreStats]
+        newCoreStats[index] = updatedCoreStat
         setCoreStats(newCoreStats)
     }
 
@@ -58,7 +75,8 @@ function TabHolder() {
                         {coreStats.map((coreStat, index) => (
                             <CoreStatCardComponent key={index} 
                             stat={coreStat.stat} value={coreStat.value} description={coreStat.description} 
-                            onDelete={() => deleteCoreStat(index)}                           
+                            onDelete={() => deleteCoreStat(index)} 
+                            onSave={(updatedCoreStat) => saveCoreStat(updatedCoreStat, index)}                          
                             />
                         ))}
                         <div className="plus-tile" onClick={addCoreStat}>
@@ -72,7 +90,8 @@ function TabHolder() {
                         {spells.map((spell, index) => (
                             <SpellCardComponent key={index} 
                             name={spell.name} level={spell.level} effect={spell.effect} 
-                            onDelete={() => deleteSpell(index)}                           
+                            onDelete={() => deleteSpell(index)} 
+                            onSave={(updatedSpell) => saveSpell(updatedSpell, index)}                          
                             />
                         ))}
                         <div className="plus-tile" onClick={addSpell}>
@@ -85,8 +104,9 @@ function TabHolder() {
                     <div className="items-container">
                         {items.map((item, index) => (
                             <ItemCardComponent key={index} 
-                            title={item.title} content={item.level} 
-                            onDelete={() => deleteItem(index)}                           
+                            title={item.title} level={item.level} description={item.description} damage={item.damage} 
+                            onDelete={() => deleteItem(index)} 
+                            onSave={(updatedItem) => saveItem(updatedItem, index)}                          
                             />
                         ))}
                         <div className="plus-tile" onClick={addItem}>
