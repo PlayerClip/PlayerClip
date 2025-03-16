@@ -33,7 +33,7 @@ function ModalComponent({ isOpen, onRequestClose, card, onSave }) {
             {Object.keys(formData).map((key) => (
                 <div key={key} className="field">
                     <label>{key}:</label>
-                    {key === 'description' ? (
+                    {key === 'Description' ? (
                         <textarea name={key} value={formData[key]} onChange={handleChange} />
                     ) : (
                         <input type="text" name={key} value={formData[key]} onChange={handleChange} />

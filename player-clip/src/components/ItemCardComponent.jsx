@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ModalComponent from './ModalComponent.jsx'
 import '../css/CardComponent.css'
 
-function ItemCardComponent({ title, level, description, damage, onDelete, onSave }) {
+function ItemCardComponent({ Title, Description, Damage, onDelete, onSave }) {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [isHovered, setIsHovered] = useState(false)
 
@@ -22,18 +22,18 @@ function ItemCardComponent({ title, level, description, damage, onDelete, onSave
     return (
         <div className="card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleCardClick}>
             <button className="delete-button" onClick={(e) => { e.stopPropagation(); onDelete(); }}>x</button>
-            <h3>{title}</h3>
-            <p>Level: {level}</p>
+            <h3>{Title}</h3>
+            <h4>Damage: {Damage}</h4>
             {isHovered && (
                 <div className="hover-content">
-                    <p>Description: {description}</p>
-                    <p>Damage: {damage}</p>
+                    <p>Damage: {Damage}</p>
+                    <p>Description: {Description}</p>
                 </div>
             )}
             <ModalComponent
                 isOpen={isModalOpen}
                 onRequestClose={handleClose}
-                card={{ title, level, description, damage }}
+                card={{ Title, Damage, Description }}
                 onSave={handleSave}
             />
         </div>
