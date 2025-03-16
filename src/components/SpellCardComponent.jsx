@@ -8,6 +8,7 @@ function SpellCardComponent({ name, level, effect, onDelete }) {
             <h3>{name}</h3>
             <p>Level: {level}</p>
             <p>Effect: {effect}</p>
+            
         </div>
     )
 }

@@ -20,6 +20,9 @@
     border-radius: 10px;
     width: 50%;
     height: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
 }
 .field {
     display: flex;
@@ -31,8 +34,17 @@
     margin-bottom: 5px;
 }
 
-.field input {
-    padding: 5px;
+.field input,
+.field textarea {
+    padding: 2px;
     box-sizing: border-box;
+    width: 100%; 
+    max-width: 120%; 
 }
 
+
+.field textarea {
+    resize: both; 
+    min-height: 50px;
+    max-height: 200px; 
+}
