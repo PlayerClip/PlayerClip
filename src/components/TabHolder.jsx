@@ -3,9 +3,10 @@ import SpellCardComponent from './SpellCardComponent.jsx'
 import CoreStatCardComponent from './CoreStatCardComponent.jsx'
 import React, { useState } from 'react'
 import '../css/TabHolder.css'
+import SpellModifierComponent from './SpellModifierComponent.jsx'
 
 function TabHolder() {
-    const [activeTab, setActiveTab] = useState('items')
+    const [activeTab, setActiveTab] = useState('core-stats')
 
     const [items, setItems] = useState([
         { Title: 'Item 1',  Damage: '10', Description: 'description of item 1', },
@@ -87,6 +88,7 @@ function TabHolder() {
             case 'spells':
                 return (
                     <div className="items-container">
+                        <SpellModifierComponent ability='1' dc='1' atkbonus='1'/>
                         {spells.map((spell, index) => (
                             <SpellCardComponent key={index} 
                             name={spell.name} level={spell.level} effect={spell.effect} 
