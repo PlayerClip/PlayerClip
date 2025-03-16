@@ -8,8 +8,7 @@ function FixedCardComponent({ name, level, hitpoints, actionClass, initiative, i
                 <div className="field_h">
                     <label>Name:</label>
                     <input type="text" value={name} placeholder="Type name" onChange={(e) => onChange('name', e.target.value)} />
-                </div>
-                <div className="field_h">
+
                     <label>Level:</label>
                     <input type="number" value={level} placeholder="0" onChange={(e) => onChange('level', e.target.value)} />
                 </div>

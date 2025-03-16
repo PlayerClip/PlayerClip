@@ -8,58 +8,61 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    overflow: auto; 
-    font-size: 0.65rem; 
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.6rem; 
     font-weight: 700;
 }
 
 .header {
-    padding: 2px;
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1%;
-    gap: 100px;
+    padding: 5%;
+    text-align: left;
+    height: fit-content;
+    width: 90%;
 }
 
 .fields-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1px;
+    gap: 1%;
+    height: auto;
+    width: 100%;
+    margin: 1%;
+    padding: 1%;
 }
 
 .field {
     display: flex;
     align-items: center;
-    margin-bottom: 4px;
-    width: 50%; 
+    flex-wrap: wrap;
+    margin: 1%;
+    width: 90%; 
 }
 
 .field_h{
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
-    width: 10%; 
+    /* align-items: center; */
+    margin-bottom: 1%;
+    width: 100%; 
  
 }
 
 .field_h input{
     flex: 1;
-    padding: 5px;
+    padding: 2%;
     box-sizing: border-box;
-    max-width: 80px;
+    width: 100%;
     color: white ;
 }
 
 .field label {
-    margin-right: 2px;
+    text-align: justify;
     flex: 1;
-    min-width: 80px;
+    width: auto;
 }
 
 .field input {
     flex: 1;
-    padding: 1px;
+    padding: 1%;
     box-sizing: border-box;
-    max-width: 80px;
+    width: 40%;
+    /* max-width: 30%; */
 }
