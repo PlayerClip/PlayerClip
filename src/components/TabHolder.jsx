@@ -8,7 +8,7 @@ function TabHolder() {
     const [activeTab, setActiveTab] = useState('items')
 
     const [items, setItems] = useState([
-        { title: 'Item 1', description: 'description of item 1', damage: '10' },
+        { Title: 'Item 1',  Damage: '10', Description: 'description of item 1', },
     ])
 
     const [spells, setSpells] = useState([
@@ -20,7 +20,7 @@ function TabHolder() {
     ])
 
     const addItem = () => {
-        const newItem = { title: `Item ${items.length + 1}`, level: `Level  ${items.length + 1}`, description: '', damage: '' }
+        const newItem = { title: `Item ${items.length + 1}`, damage: '', description: '' }
         setItems([...items, newItem])
     }
 
@@ -104,7 +104,7 @@ function TabHolder() {
                     <div className="items-container">
                         {items.map((item, index) => (
                             <ItemCardComponent key={index} 
-                            Title={item.title} Description={item.description} Damage={item.damage} 
+                            Title={item.Title} Description={item.Description} Damage={item.Damage} 
                             onDelete={() => deleteItem(index)} 
                             onSave={(updatedItem) => saveItem(updatedItem, index)}                          
                             />
