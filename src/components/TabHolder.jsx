@@ -21,7 +21,7 @@ function TabHolder() {
     ])
 
     const addItem = () => {
-        const newItem = { title: `Item ${items.length + 1}`, damage: '', description: '' }
+        const newItem = { Title: `Item ${items.length + 1}`, Damage: '', Description: '' }
         setItems([...items, newItem])
     }
 
