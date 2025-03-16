@@ -26,8 +26,8 @@ function ItemCardComponent({ Title, Description, Damage, onDelete, onSave }) {
             <h4>Damage: {Damage}</h4>
             {isHovered && (
                 <div className="hover-content">
-                    <p>Damage: {Damage}</p>
-                    <p>Description: {Description}</p>
+                    <p><h4>Damage:</h4> {Damage}</p>
+                    <p><h4>Description:</h4> {Description}</p>
                 </div>
             )}
             <ModalComponent
