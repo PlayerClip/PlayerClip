@@ -3,16 +3,17 @@ import SpellCardComponent from './SpellCardComponent.jsx'
 import CoreStatCardComponent from './CoreStatCardComponent.jsx'
 import React, { useState } from 'react'
 import '../css/TabHolder.css'
+import SpellModifierComponent from './SpellModifierComponent.jsx'
 
 function TabHolder() {
     const [activeTab, setActiveTab] = useState('core-stats')
 
     const [items, setItems] = useState([
-        { title: 'item 1', level: 'Level 1', description: 'description of item 1', damage: '10' },
+        { Title: 'Item 1',  Damage: '10', Description: 'description of item 1', },
     ])
 
     const [spells, setSpells] = useState([
-        { name: 'spell 1', level: 1, effect: 'effect of spell 1' },
+        { name: 'Spell 1', level: 1, effect: 'effect of spell 1' },
     ])
 
     const [coreStats, setCoreStats] = useState([
@@ -25,7 +26,7 @@ function TabHolder() {
     ])
 
     const addItem = () => {
-        const newItem = { title: `Item ${items.length + 1}`, level: `Level  ${items.length + 1}`, description: '', damage: '' }
+        const newItem = { Title: `Item ${items.length + 1}`, Damage: '', Description: '' }
         setItems([...items, newItem])
     }
 
@@ -95,6 +96,7 @@ function TabHolder() {
             case 'spells':
                 return (
                     <div className="items-container">
+                        <SpellModifierComponent ability='1' dc='1' atkbonus='1'/>
                         {spells.map((spell, index) => (
                             <SpellCardComponent key={index}
                                 name={spell.name} level={spell.level} effect={spell.effect}
@@ -111,10 +113,10 @@ function TabHolder() {
                 return (
                     <div className="items-container">
                         {items.map((item, index) => (
-                            <ItemCardComponent key={index}
-                                title={item.title} level={item.level} description={item.description} damage={item.damage}
-                                onDelete={() => deleteItem(index)}
-                                onSave={(updatedItem) => saveItem(updatedItem, index)}
+                            <ItemCardComponent key={index} 
+                            Title={item.Title} Description={item.Description} Damage={item.Damage} 
+                            onDelete={() => deleteItem(index)} 
+                            onSave={(updatedItem) => saveItem(updatedItem, index)}                          
                             />
                         ))}
                         <div className="plus-tile" onClick={addItem}>
