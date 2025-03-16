@@ -12,7 +12,7 @@ export default function CoreStatCardComponent({ stat, mod, derivedStats, onDelet
     }
 
     return (
-        <div className="card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className="card" onClick={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             {/* <button className="delete-button" onClick={onDelete}>x</button> */}
             {(isHovered && derivedStats.length > 0) && (
                 <div className="hover-content">
