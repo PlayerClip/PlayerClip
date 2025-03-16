@@ -1,0 +1,32 @@
+.main-component {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background-color: #d7d7d7;
+  /* padding: 10px; */
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  /* margin-left: 20px ; */
+}
+
+/*We had too many divs and components inside divs so i had to remove some to avoid confusion*/
+/* .constantView {
+  margin: 1%;
+  width: 20%;
+  height: 96%;
+  background-color: #f8f8f800;
+  box-sizing: border-box;
+  border-radius: 10px;
+} */
+
+.tabs {
+  margin: 1%;
+  width: 98%;
+  height: 94%;
+  background-color: #acacac;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
