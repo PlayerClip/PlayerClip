@@ -94,8 +94,6 @@ function TabHolder() {
                             onSave={(updatedSpell) => saveSpell(updatedSpell, index)}                          
                             />
                         ))}
-                        // Add the spellcasting ability, spell save dc, and spell attack bonus
-                        <SpellCardComponent />
                         <div className="plus-tile" onClick={addSpell}>
                             +
                         </div>
