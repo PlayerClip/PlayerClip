@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import '../css/CardComponent.css'
 
-export default function CoreStatCardComponent({ stat, value, derivedStats, onDelete }) {
+export default function CoreStatCardComponent({ stat, mod, derivedStats, onDelete, onSave }) {
     const [isHovered, setIsHovered] = useState(false)
 
     const handleMouseEnter = () => setIsHovered(true)
     const handleMouseLeave = () => setIsHovered(false)
 
     function calcMod() {
-        return Math.floor(value / 2) - 5
+        return Math.floor(mod / 2) - 5
     }
 
     return (
@@ -23,7 +23,9 @@ export default function CoreStatCardComponent({ stat, value, derivedStats, onDel
             )}
             <h3>{stat}</h3>
             <h2>{calcMod()}</h2>
-            <p>{value}</p>
+            <div className="field">
+                <input type="number" value={mod} onChange={(e) => onSave(e.target.value)} />
+            </div>
         </div>
 
     )
