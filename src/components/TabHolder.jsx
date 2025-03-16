@@ -17,7 +17,12 @@ function TabHolder() {
     ])
 
     const [coreStats, setCoreStats] = useState([
-        { stat: 'Core 1', value: 10, description: 'description' },
+        { stat: 'STR', mod: 10, derivedStats: ["Athletics"] },
+        { stat: 'DEX', mod: 11, derivedStats: ["Acrobatics", "Sleight of Hand", "Stealth"] },
+        { stat: 'INT', mod: 9,  derivedStats: ["Arcana", "History", "Investigation", "Nature", "Religion"] },
+        { stat: 'WIS', mod: 15, derivedStats: ["Animal Handling", "Insight", "Medicine", "Perception", "Survival"] },
+        { stat: 'CHA', mod: 13, derivedStats: ["Deception", "Intimidation", "Performance", "Persuasion"] },
+        { stat: 'CON', mod: 12, derivedStats: [] },
     ])
 
     const addItem = () => {
@@ -52,19 +57,19 @@ function TabHolder() {
         setSpells(newSpells)
     }
 
-    const addCoreStat = () => {
-        const newCoreStat = { stat: `Core Stat ${coreStats.length + 1}`, value: coreStats.length + 1, description: `description ${coreStats.length + 1}` }
-        setCoreStats([...coreStats, newCoreStat])
-    }
+    // const addCoreStat = () => {
+    //     const newCoreStat = { stat: `Core Stat ${coreStats.length + 1}`, value: coreStats.length + 1, description: `description ${coreStats.length + 1}` }
+    //     setCoreStats([...coreStats, newCoreStat])
+    // }
 
-    const deleteCoreStat = (index) => {
-        const newCoreStats = coreStats.filter((_, i) => i !== index)
-        setCoreStats(newCoreStats)
-    }
+    // const deleteCoreStat = (index) => {
+    //     const newCoreStats = coreStats.filter((_, i) => i !== index)
+    //     setCoreStats(newCoreStats)
+    // }
 
     const saveCoreStat = (updatedCoreStat, index) => {
         const newCoreStats = [...coreStats]
-        newCoreStats[index] = updatedCoreStat
+        newCoreStats[index].mod = updatedCoreStat
         setCoreStats(newCoreStats)
     }
 
@@ -74,15 +79,18 @@ function TabHolder() {
                 return (
                     <div className="items-container">
                         {coreStats.map((coreStat, index) => (
-                            <CoreStatCardComponent key={index} 
-                            stat={coreStat.stat} value={coreStat.value} description={coreStat.description} 
-                            onDelete={() => deleteCoreStat(index)} 
-                            onSave={(updatedCoreStat) => saveCoreStat(updatedCoreStat, index)}                          
+                            <CoreStatCardComponent 
+                                key={index}
+                                stat={coreStat.stat} 
+                                mod={coreStat.mod} 
+                                derivedStats={coreStat.derivedStats}
+                                // onDelete={() => deleteCoreStat(index)}
+                                onSave={(updatedCoreStat) => saveCoreStat(updatedCoreStat, index)}
                             />
                         ))}
-                        <div className="plus-tile" onClick={addCoreStat}>
+                        {/* <div className="plus-tile" onClick={addCoreStat}>
                             +
-                        </div>
+                        </div> */}
                     </div>
                 )
             case 'spells':
@@ -90,10 +98,10 @@ function TabHolder() {
                     <div className="items-container">
                         <SpellModifierComponent ability='1' dc='1' atkbonus='1'/>
                         {spells.map((spell, index) => (
-                            <SpellCardComponent key={index} 
-                            name={spell.name} level={spell.level} effect={spell.effect} 
-                            onDelete={() => deleteSpell(index)} 
-                            onSave={(updatedSpell) => saveSpell(updatedSpell, index)}                          
+                            <SpellCardComponent key={index}
+                                name={spell.name} level={spell.level} effect={spell.effect}
+                                onDelete={() => deleteSpell(index)}
+                                onSave={(updatedSpell) => saveSpell(updatedSpell, index)}
                             />
                         ))}
                         <div className="plus-tile" onClick={addSpell}>
@@ -128,7 +136,7 @@ function TabHolder() {
                     className={activeTab === 'core-stats' ? 'active' : ''}
                     onClick={() => setActiveTab('core-stats')}
                 >
-                    Core Stats
+                    Stats
                 </button>
                 <button
                     className={activeTab === 'items' ? 'active' : ''}
