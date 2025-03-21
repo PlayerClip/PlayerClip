@@ -9,20 +9,20 @@ function TabHolder() {
     const [activeTab, setActiveTab] = useState('core-stats')
 
     const [items, setItems] = useState([
-        { Title: 'Item 1',  Damage: '10', Description: 'description of item 1', },
+        // { Title: 'Item 1',  Damage: '10', Description: 'description of item 1', },
     ])
 
     const [spells, setSpells] = useState([
-        { name: 'Spell 1', level: 1, effect: 'effect of spell 1' },
+        // { name: 'Spell 1', level: 1, effect: 'effect of spell 1' },
     ])
 
     const [coreStats, setCoreStats] = useState([
         { stat: 'STR', mod: 10, derivedStats: ["Athletics"] },
-        { stat: 'DEX', mod: 11, derivedStats: ["Acrobatics", "Sleight of Hand", "Stealth"] },
-        { stat: 'INT', mod: 9,  derivedStats: ["Arcana", "History", "Investigation", "Nature", "Religion"] },
-        { stat: 'WIS', mod: 15, derivedStats: ["Animal Handling", "Insight", "Medicine", "Perception", "Survival"] },
-        { stat: 'CHA', mod: 13, derivedStats: ["Deception", "Intimidation", "Performance", "Persuasion"] },
-        { stat: 'CON', mod: 12, derivedStats: [] },
+        { stat: 'DEX', mod: 10, derivedStats: ["Acrobatics", "Sleight of Hand", "Stealth"] },
+        { stat: 'INT', mod: 10,  derivedStats: ["Arcana", "History", "Investigation", "Nature", "Religion"] },
+        { stat: 'WIS', mod: 10, derivedStats: ["Animal Handling", "Insight", "Medicine", "Perception", "Survival"] },
+        { stat: 'CHA', mod: 10, derivedStats: ["Deception", "Intimidation", "Performance", "Persuasion"] },
+        { stat: 'CON', mod: 10, derivedStats: [] },
     ])
 
     const addItem = () => {
