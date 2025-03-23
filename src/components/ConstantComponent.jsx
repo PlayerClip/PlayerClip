@@ -4,10 +4,10 @@ import FixedCardComponent from './FixedCardComponent.jsx'
 
 function ConstantComponent() {
     const [character, setCharacter] = useState({
-        name: 'Plormby Gillman',
+        name: 'Character Name',
         level: 1,
-        hitpoints: 100,
-        actionClass: '',
+        hitpoints: 10,
+        actionClass: 12,
         initiative: 0,
         inspiration: '',
         money: 0
